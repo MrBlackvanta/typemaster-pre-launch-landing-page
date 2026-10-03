@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@source not "../../*.md";
+
+@theme {
+  --font-sans: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #162542;
+  --color-ink-soft: #7b8bad;
+  --color-brand: #f16718;
+  --color-brand-soft: #ff9b62;
+  --color-mist: #e8eff2;
+
+  --container-shell: 69.375rem;
+}
+
+@utility v-shell {
+  @apply mx-auto w-full px-6;
+  max-width: calc(var(--container-shell) + 3rem);
+}
+
+@utility v-focus-ring {
+  &:focus-visible {
+    outline: 3px solid var(--focus-ring, var(--color-ink));
+    outline-offset: 3px;
+  }
+}
+
+@utility v-skip-link {
+  @apply sr-only;
+
+  &:focus {
+    @apply text-ink not-sr-only fixed top-4 left-4 z-50 rounded bg-white px-5 py-3 font-bold;
+  }
+}
+
+@layer base {
+  html {
+    @apply font-sans;
+    color-scheme: light;
+    overflow-y: scroll;
+  }
+
+  body {
+    @apply text-ink-soft bg-white;
+  }
+
+  button:not(:disabled) {
+    @apply cursor-pointer;
+  }
+
+  source {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+}
