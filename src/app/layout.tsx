@@ -1,4 +1,4 @@
-import { SITE_URL } from "@/app/site";
+import { SITE_URL } from "@/data/site";
 import type { Metadata, Viewport } from "next";
 import { Barlow } from "next/font/google";
 import "./globals.css";
