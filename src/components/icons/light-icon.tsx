@@ -6,6 +6,8 @@ export default function LightIcon({ className }: LightIconProps) {
   return (
     <svg
       viewBox="0 0 32 32"
+      width={32}
+      height={32}
       fill="currentColor"
       aria-hidden="true"
       className={className}

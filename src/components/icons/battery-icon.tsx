@@ -6,6 +6,8 @@ export default function BatteryIcon({ className }: BatteryIconProps) {
   return (
     <svg
       viewBox="0 0 32 21"
+      width={32}
+      height={21}
       fill="currentColor"
       aria-hidden="true"
       className={className}

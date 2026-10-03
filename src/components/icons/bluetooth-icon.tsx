@@ -6,6 +6,8 @@ export default function BluetoothIcon({ className }: BluetoothIconProps) {
   return (
     <svg
       viewBox="0 0 19 28"
+      width={19}
+      height={28}
       fill="currentColor"
       aria-hidden="true"
       className={className}

@@ -1,5 +1,5 @@
 import { SiteHeader } from "@/components/layout";
-import { Hero, Showcase } from "@/views/home";
+import { FeatureList, Hero, Showcase } from "@/views/home";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <main id="main">
         <Hero />
         <Showcase />
+        <FeatureList />
       </main>
     </>
   );

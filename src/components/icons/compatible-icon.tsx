@@ -6,6 +6,8 @@ export default function CompatibleIcon({ className }: CompatibleIconProps) {
   return (
     <svg
       viewBox="0 0 26 21"
+      width={26}
+      height={21}
       fill="currentColor"
       aria-hidden="true"
       className={className}
