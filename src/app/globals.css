@@ -63,7 +63,7 @@
   }
 
   body {
-    @apply text-body text-ink-soft bg-white;
+    @apply text-body text-ink-soft bg-white font-medium;
   }
 
   h1,
