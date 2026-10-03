@@ -5,17 +5,39 @@
   --font-sans: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
 
   --color-ink: #162542;
-  --color-ink-soft: #7b8bad;
+  --color-ink-soft: #63769e;
   --color-brand: #f16718;
   --color-brand-soft: #ff9b62;
   --color-mist: #e8eff2;
+
+  --text-display: 3rem;
+  --text-display--line-height: 1;
+  --text-display-lg: 3.5rem;
+  --text-display-lg--line-height: 1;
+  --text-title: 2rem;
+  --text-title--line-height: 1.125;
+  --text-subtitle: 1.5rem;
+  --text-subtitle--line-height: 1.166667;
+  --text-lead: 1.125rem;
+  --text-lead--line-height: 1.444444;
+  --text-body: 1rem;
+  --text-body--line-height: 1.625;
+
+  --radius-frame: 1.25rem;
 
   --container-shell: 69.375rem;
 }
 
 @utility v-shell {
-  @apply mx-auto w-full px-6;
-  max-width: calc(var(--container-shell) + 3rem);
+  --shell-pad: 1.5rem;
+  margin-inline: auto;
+  width: 100%;
+  max-width: calc(var(--container-shell) + 2 * var(--shell-pad));
+  padding-inline: var(--shell-pad);
+
+  @variant md {
+    --shell-pad: 2.5rem;
+  }
 }
 
 @utility v-focus-ring {
@@ -41,7 +63,13 @@
   }
 
   body {
-    @apply text-ink-soft bg-white;
+    @apply text-body text-ink-soft bg-white;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply text-ink font-black;
   }
 
   button:not(:disabled) {
